@@ -235,17 +235,17 @@
   
 <div class="input-block"><input type="phone" id="phones" placeholder="Ваш телефон*"></div>    
 <div class="input-block"><input type="email" placeholder="Ваш email*"></div>    
-  
-<div class="input-block"><input type="text" placeholder="Введите название организации"></div>    
-<div class="input-block"><input type="text" placeholder="ИНН"></div>    
-<div class="input-block"><input type="url" placeholder="Адрес сайта"></div>    
+<div class="input--org" id="inputorg">
+<div class="input-block"><input type="text" placeholder="Введите название организации"></div>       
+<div class="input-block"><input type="url" placeholder="Адрес сайта"></div>        
+</div>  
 <div class="input-block"><a class="button"><span>Сохранить</span></a></div>    
     
 <h2>Смена пароля</h2>
      
 <div class="input-block"><input type="password" placeholder="Старый пароль"></div>    
 <div class="input-block"><input type="password" placeholder="Новый пароль"></div>    
-<div class="input-block"><input type="password" placeholder="Подтверждение пароля"></div>    
+<div class="input-block"><input type="password" placeholder="Подтверждение пароля"></div>  
 <div class="input-block"><a class="button blue"><span>Сменить пароль</span></a></div>    
      
 </form>    
@@ -254,7 +254,7 @@
 <div class="section--reg--akkaunt">
 
 <!-- one block -->  
-<div id="akk1" class="section--reg--akkaunt--one active-akk ">
+<div id="akk1" class="section--reg--akkaunt--one">
 <div class="ph-image" style="background: url(img/ak1.jpg)"></div>
 <div class="phbg"></div>
 <span class="ak-title">Покупатель</span>
@@ -278,7 +278,7 @@
 <!-- one block -->   
    
 <!-- one block -->  
-<div id="akk3" class="section--reg--akkaunt--one">
+<div id="akk3" class="section--reg--akkaunt--one active-akk">
 <div class="ph-image" style="background: url(img/ak3.jpg)"></div>
 <div class="phbg"></div>
 <span class="ak-title">Арендатор</span>
@@ -662,10 +662,12 @@
     
 <script>
 $(document).ready(function() {
-   var akk1 = 1; akk2 = 0; akk3 = 0; akk4 = 0; // registration stick
+   var akk1 = 0; akk2 = 0; akk3 = 1; akk4 = 0; // registration stick
      
      
  // registration stick code
+    
+      if (akk2 + akk3 + akk4 != 0)  { $('#inputorg').fadeIn(0);} else {$('#inputorg').fadeOut(0);}    
      
       $('#stickizz1').click(function() {
       if (akk1 == 0) {
@@ -676,7 +678,7 @@ $(document).ready(function() {
       $('#akk1').removeClass('active-akk');
       akk1 = 0;
       }
-     
+      if (akk2 + akk3 + akk4 != 0)  { $('#inputorg').fadeIn(0);} else {$('#inputorg').fadeOut(0);}
        }); 
      
      
@@ -684,13 +686,15 @@ $(document).ready(function() {
       $('#stickizz2').click(function() {
       if (akk2 == 0) {
       $('#akk2').addClass('active-akk');
-      akk2 = 1;
+      akk2 = 1;         
       }
       else {
       $('#akk2').removeClass('active-akk');
       akk2 = 0;
       }
      
+      if (akk2 + akk3 + akk4 != 0)  { $('#inputorg').fadeIn(0);} else {$('#inputorg').fadeOut(0);}    
+          
        }); 
       
      
@@ -703,21 +707,30 @@ $(document).ready(function() {
       $('#akk3').removeClass('active-akk');
       akk3 = 0;
       }
-     
+      if (akk2 + akk3 + akk4 == 0)  { $('#inputorg').fadeIn(0);} else {$('#inputorg').fadeOut(0);}
        }); 
       
      
       $('#stickizz4').click(function() {
       if (akk4 == 0) {
-      $('#akk4').addClass('active-akk');
+      $('#akk4').addClass('active-akk');  
       akk4 = 1;
       }
       else {
       $('#akk4').removeClass('active-akk');
       akk4 = 0;
       }
-     
-       });        }); 
+              
+          
+     if (akk2 + akk3 + akk4 != 0)  { $('#inputorg').fadeIn(0);} else {$('#inputorg').fadeOut(0);}
+     });    
+
+
+
+
+
+
+}); 
       
 
     

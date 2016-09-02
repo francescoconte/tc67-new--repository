@@ -2079,6 +2079,7 @@ nav .top-menu li .login:hover span {
 .teeser .midi h2 {
   color: #fff;
   padding: 13px;
+  text-align: center;
 }
 .teeser .midi p {
   color: #fff;
@@ -2895,6 +2896,17 @@ nav .top-menu li .login:hover span {
   font-size: 12px;
   margin-bottom: 15px;
 }
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .home-news .news-post {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 33.33%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .home-news .news-post {
     padding-left: 35px;
@@ -3478,6 +3490,18 @@ nav .top-menu li .login:hover span {
   font-family: 'ProximaNovaBold', sans-serif;
   margin-bottom: 8px;
 }
+.cat-tc-one .one-tc .one-info .mag .mag--title i.map {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-position: CENTER CENTER !important;
+  background-repeat: no-repeat !important;
+  background-size: contain!important;
+  background: url(../img/icon--map--tc.png);
+}
+.cat-tc-one .one-tc .one-info .mag .mag--title span {
+  display: block;
+}
 .cat-tc-one .one-tc .one-info .one-mag {
   height: auto;
 }
@@ -3523,7 +3547,7 @@ nav .top-menu li .login:hover span {
   height: 285px;
 }
 .cat-tc-one .one-tc .mag--one-info-mag--page {
-  height: 315px;
+  height: 325px;
 }
 .cat-tc-one .one-tc .arenda--one-info {
   height: 80px;
@@ -3688,7 +3712,7 @@ nav .top-menu li .login:hover span {
 .cat-tc-one .liners .one-tc .one {
   display: inline-block;
   width: 30%;
-  height: 270px;
+  height: 325px;
 }
 .cat-tc-one .liners .one-tc .one .image {
   border: 0px solid;
@@ -3698,7 +3722,7 @@ nav .top-menu li .login:hover span {
   float: left;
   width: 70%;
   padding: 18px 20px;
-  height: 270px;
+  height: 325px;
   background: #fff;
 }
 .cat-tc-one .liners .tc--content-info-one .mag--but-block {
@@ -5774,9 +5798,52 @@ footer .foot-info .end-block .parus a:hover {
     width: 80%;
   }
 }
+#inputorg {
+  display: none;
+}
 .section--lk--form {
   width: 100%;
   float: left;
+  background: #fafafa;
+}
+.section--lk--form .button-redact {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  padding: 28px 20px;
+}
+.section--lk--form .button-redact .plazz {
+  display: block;
+  float: left;
+  width: 100%;
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.section--lk--form .button-redact .adress {
+  display: block;
+  float: left;
+  width: 100%;
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.section--lk--form .button-redact .line {
+  float: left;
+  width: 100%;
+}
+.section--lk--form .button-redact .redact {
+  font-size: 12px;
+  color: #232425;
+  background: #eeeeee;
+  padding: 8px 14px;
+  border-radius: 25px;
+  margin-right: 10px;
+  float: left;
+}
+.section--lk--form .a-table {
   background: #fafafa;
 }
 .section--lk--form .content .float-content {
@@ -5787,28 +5854,81 @@ footer .foot-info .end-block .parus a:hover {
   margin-bottom: 70px;
   min-height: 750px;
 }
-.section--lk--form .content .float-content .section--reg--form--block {
+.section--lk--form .content .float-content .title-bar {
+  float: left;
+  width: 100%;
+  margin: 0px 0;
+  border-left: solid 0px;
+  border-right: solid 0px;
+}
+.section--lk--form .content .float-content .title-bar h2 {
+  margin: 0px 0px 20px;
+  font-weight: 300;
+  color: #525252;
+  font-size: 30px;
+}
+.section--lk--form .content .float-content .title-bar h2 a {
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-left: 25px;
+  border-radius: 45px;
+}
+.section--lk--form .content .float-content .one-tc {
+  width: 50%;
+  margin: 10px 0;
+}
+.section--lk--form .content .float-content .one-tc .one-info {
+  border: solid 1px #e8e8e8;
+}
+.section--lk--form .content .float-content .one-tc .button {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+}
+.section--lk--form .content .float-content .one-tc .mag--one-info {
+  height: auto;
+}
+.section--lk--form .content .float-content .one-tc .mag--but-block .redact {
+  font-size: 12px;
+  color: #232425;
+  background: #eeeeee;
+  padding: 8px 14px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+.section--lk--form .content .paginaters {
+  background: transparent;
+  min-height: 20px;
+  margin-top: -55px;
+  margin-bottom: 70px;
+}
+.section--lk--form .content .paginaters .paginator {
+  padding: 0;
+}
+.section--lk--form .content .section--reg--form--block {
   padding: 0px;
 }
-.section--lk--form .content .float-content p {
+.section--lk--form .content p {
   padding: 0 10px 32px;
 }
-.section--lk--form .lk input {
+.lk input {
   width: 378px !important;
 }
-.section--lk--form .float--left--menu {
+.float--left--menu {
   float: left;
   width: 375px;
   min-height: 460px;
   background: #fff;
 }
-.section--lk--form .float--left--menu .left--menu--block {
+.float--left--menu .left--menu--block {
   border: solid 1px #eeeeee;
   float: left;
   width: 100%;
   border-top: 0px solid;
 }
-.section--lk--form .float--left--menu .left--menu--block .title---block {
+.float--left--menu .left--menu--block .title---block {
   float: left;
   width: 100%;
   height: 105px;
@@ -5816,44 +5936,44 @@ footer .foot-info .end-block .parus a:hover {
   padding: 0 40px;
   border-bottom: solid 1px #eeeeee;
 }
-.section--lk--form .float--left--menu .left--menu--block .title---block span {
+.float--left--menu .left--menu--block .title---block span {
   display: table-cell;
   vertical-align: middle;
   font-size: 18px;
   font-family: 'ProximaNovaBold', sans-serif;
 }
-.section--lk--form .float--left--menu .left--menu--block ul {
+.float--left--menu .left--menu--block ul {
   float: left;
   width: 100%;
 }
-.section--lk--form .float--left--menu .left--menu--block ul li {
+.float--left--menu .left--menu--block ul li {
   float: left;
   width: 100%;
   border-bottom: solid 1px #eeeeee;
 }
-.section--lk--form .float--left--menu .left--menu--block ul li a {
+.float--left--menu .left--menu--block ul li a {
   color: #232425;
   padding: 27px 40px;
   display: block;
   font-family: 'proxima_nova_ltlight', sans-serif;
 }
-.section--lk--form .float--left--menu .left--menu--block ul li.active {
+.float--left--menu .left--menu--block ul li.active {
   background: #2ea0f0;
 }
-.section--lk--form .float--left--menu .left--menu--block ul li.active a {
+.float--left--menu .left--menu--block ul li.active a {
   color: #fff;
 }
-.section--lk--form .float--left--menu .left--menu--block ul li:hover {
+.float--left--menu .left--menu--block ul li:hover {
   background: #2ea0f0;
 }
-.section--lk--form .float--left--menu .left--menu--block ul li:hover a {
+.float--left--menu .left--menu--block ul li:hover a {
   color: #fff;
 }
-.section--lk--form .float--left--menu .left--menu--block ul li:last-child {
+.float--left--menu .left--menu--block ul li:last-child {
   border-bottom: 0px solid;
 }
-.section--lk--form h1,
-.section--lk--form h2 {
+h1,
+h2 {
   text-align: left;
   margin-top: 0px;
   float: left;
@@ -5863,10 +5983,10 @@ footer .foot-info .end-block .parus a:hover {
   font-size: 30px;
   font-family: 'proxima_nova_ltlight', sans-serif;
 }
-.section--lk--form h2 {
+h2 {
   margin: 55px 9px 30px;
 }
-.section--lk--form .section--lk--form--block {
+.section--lk--form--block {
   float: left;
   width: 100%;
   padding: 0 0px;
@@ -5874,67 +5994,67 @@ footer .foot-info .end-block .parus a:hover {
   /* Firefox 19+ */
   /* Firefox 18- */
 }
-.section--lk--form .section--lk--form--block ::-webkit-input-placeholder {
+.section--lk--form--block ::-webkit-input-placeholder {
   color: #232425;
 }
-.section--lk--form .section--lk--form--block ::-moz-placeholder {
+.section--lk--form--block ::-moz-placeholder {
   color: #232425;
 }
-.section--lk--form .section--lk--form--block :-moz-placeholder {
+.section--lk--form--block :-moz-placeholder {
   color: #232425;
 }
-.section--lk--form .section--lk--form--block :-ms-input-placeholder {
+.section--lk--form--block :-ms-input-placeholder {
   color: #232425;
 }
-.section--lk--form .section--lk--form--block .input-block {
+.section--lk--form--block .input-block {
   float: left;
   width: 100%;
   border: solid 9px transparent;
 }
-.section--lk--form .section--lk--form--block .input-block input {
+.section--lk--form--block .input-block input {
   display: block;
   width: 50%;
   border: solid 1px #dddddd;
   padding: 20px;
   color: #232425;
 }
-.section--lk--form .section--lk--form--block .input-block .button {
+.section--lk--form--block .input-block .button {
   margin: 0px;
   width: 250px;
 }
-.section--lk--form .section--lk--form--block .input-block .blue {
+.section--lk--form--block .input-block .blue {
   margin: 0px;
   width: 250px;
   background: #2ea0f0;
   border-color: #2ea0f0;
 }
-.section--lk--form .section--lk--form--block .input-block .blue span {
+.section--lk--form--block .input-block .blue span {
   color: #fff;
 }
-.section--lk--form .section--lk--form--block .input-block .blue:hover {
+.section--lk--form--block .input-block .blue:hover {
   background: #178bdc;
   border-color: #178bdc;
 }
-.section--lk--form .section--lk--form--block .input-block-text {
+.section--lk--form--block .input-block-text {
   float: left;
   width: 100%;
   border: solid 9px transparent;
   /* Firefox 19+ */
   /* Firefox 18- */
 }
-.section--lk--form .section--lk--form--block .input-block-text ::-webkit-input-placeholder {
+.section--lk--form--block .input-block-text ::-webkit-input-placeholder {
   color: #dddddd;
 }
-.section--lk--form .section--lk--form--block .input-block-text ::-moz-placeholder {
+.section--lk--form--block .input-block-text ::-moz-placeholder {
   color: #dddddd;
 }
-.section--lk--form .section--lk--form--block .input-block-text :-moz-placeholder {
+.section--lk--form--block .input-block-text :-moz-placeholder {
   color: #dddddd;
 }
-.section--lk--form .section--lk--form--block .input-block-text :-ms-input-placeholder {
+.section--lk--form--block .input-block-text :-ms-input-placeholder {
   color: #dddddd;
 }
-.section--lk--form .section--lk--form--block .input-block-text textarea {
+.section--lk--form--block .input-block-text textarea {
   display: block;
   width: 100%;
   border: solid 1px #dddddd;
@@ -5943,57 +6063,57 @@ footer .foot-info .end-block .parus a:hover {
   height: 240px;
   font-size: 15px;
 }
-.section--lk--form .section--reg--form--block {
+.section--reg--form--block {
   float: left;
   width: 100%;
   padding: 0 242px;
   /* Firefox 19+ */
   /* Firefox 18- */
 }
-.section--lk--form .section--reg--form--block ::-webkit-input-placeholder {
+.section--reg--form--block ::-webkit-input-placeholder {
   color: #232425;
 }
-.section--lk--form .section--reg--form--block ::-moz-placeholder {
+.section--reg--form--block ::-moz-placeholder {
   color: #232425;
 }
-.section--lk--form .section--reg--form--block :-moz-placeholder {
+.section--reg--form--block :-moz-placeholder {
   color: #232425;
 }
-.section--lk--form .section--reg--form--block :-ms-input-placeholder {
+.section--reg--form--block :-ms-input-placeholder {
   color: #232425;
 }
-.section--lk--form .section--reg--form--block .input-block {
+.section--reg--form--block .input-block {
   float: left;
   width: 50%;
   border: solid 9px transparent;
 }
-.section--lk--form .section--reg--form--block .input-block input {
+.section--reg--form--block .input-block input {
   display: block;
   width: 100%;
   border: solid 1px #dddddd;
   padding: 20px;
   color: #232425;
 }
-.section--lk--form .section--reg--form--block .input-block-text {
+.section--reg--form--block .input-block-text {
   float: left;
   width: 100%;
   border: solid 9px transparent;
   /* Firefox 19+ */
   /* Firefox 18- */
 }
-.section--lk--form .section--reg--form--block .input-block-text ::-webkit-input-placeholder {
+.section--reg--form--block .input-block-text ::-webkit-input-placeholder {
   color: #dddddd;
 }
-.section--lk--form .section--reg--form--block .input-block-text ::-moz-placeholder {
+.section--reg--form--block .input-block-text ::-moz-placeholder {
   color: #dddddd;
 }
-.section--lk--form .section--reg--form--block .input-block-text :-moz-placeholder {
+.section--reg--form--block .input-block-text :-moz-placeholder {
   color: #dddddd;
 }
-.section--lk--form .section--reg--form--block .input-block-text :-ms-input-placeholder {
+.section--reg--form--block .input-block-text :-ms-input-placeholder {
   color: #dddddd;
 }
-.section--lk--form .section--reg--form--block .input-block-text textarea {
+.section--reg--form--block .input-block-text textarea {
   display: block;
   width: 100%;
   border: solid 1px #dddddd;
@@ -6002,14 +6122,14 @@ footer .foot-info .end-block .parus a:hover {
   height: 240px;
   font-size: 15px;
 }
-.section--lk--form .section--reg--akkaunt {
+.section--reg--akkaunt {
   float: left;
   width: 100%;
   padding: 0 0px;
   margin: 70px 0;
   margin-left: -9px;
 }
-.section--lk--form .section--reg--akkaunt .section--reg--akkaunt--one {
+.section--reg--akkaunt .section--reg--akkaunt--one {
   float: left;
   display: inline-table;
   width: 50%;
@@ -6019,7 +6139,7 @@ footer .foot-info .end-block .parus a:hover {
   background: #232425;
   position: relative;
 }
-.section--lk--form .section--reg--akkaunt .section--reg--akkaunt--one .ph-image {
+.section--reg--akkaunt .section--reg--akkaunt--one .ph-image {
   position: absolute;
   display: block;
   width: 100%;
@@ -6031,7 +6151,7 @@ footer .foot-info .end-block .parus a:hover {
   background-size: COVER !important;
   opacity: 0.55;
 }
-.section--lk--form .section--reg--akkaunt .section--reg--akkaunt--one .phbg {
+.section--reg--akkaunt .section--reg--akkaunt--one .phbg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -6041,7 +6161,7 @@ footer .foot-info .end-block .parus a:hover {
   background: #18db61;
   display: none;
 }
-.section--lk--form .section--reg--akkaunt .section--reg--akkaunt--one .ak-title {
+.section--reg--akkaunt .section--reg--akkaunt--one .ak-title {
   text-align: center;
   position: relative;
   display: table-cell;
@@ -6050,7 +6170,7 @@ footer .foot-info .end-block .parus a:hover {
   font-family: 'ProximaNovaBold', sans-serif;
   color: #fff;
 }
-.section--lk--form .section--reg--akkaunt .section--reg--akkaunt--one .stickizz {
+.section--reg--akkaunt .section--reg--akkaunt--one .stickizz {
   position: absolute;
   display: block;
   top: 27px;
@@ -6062,7 +6182,7 @@ footer .foot-info .end-block .parus a:hover {
   border: solid 2px #fff;
   cursor: pointer;
 }
-.section--lk--form .section--reg--akkaunt .section--reg--akkaunt--one .stickizz .stick-off {
+.section--reg--akkaunt .section--reg--akkaunt--one .stickizz .stick-off {
   display: inline-block;
   float: right;
   width: 21px;
@@ -6070,7 +6190,7 @@ footer .foot-info .end-block .parus a:hover {
   border-radius: 25px;
   background: #f0334e;
 }
-.section--lk--form .section--reg--akkaunt .section--reg--akkaunt--one .stickizz .stick-txt-l {
+.section--reg--akkaunt .section--reg--akkaunt--one .stickizz .stick-txt-l {
   display: inline-block;
   float: left;
   font-family: 'proxima_nova_ltlight', sans-serif;
@@ -6078,7 +6198,7 @@ footer .foot-info .end-block .parus a:hover {
   font-size: 11px;
   padding: 5px 3px;
 }
-.section--lk--form .section--reg--akkaunt .section--reg--akkaunt--one .stickizz .stick-txt-r {
+.section--reg--akkaunt .section--reg--akkaunt--one .stickizz .stick-txt-r {
   display: none;
   float: right;
   font-family: 'proxima_nova_ltlight', sans-serif;
@@ -6086,10 +6206,10 @@ footer .foot-info .end-block .parus a:hover {
   font-size: 11px;
   padding: 5px 3px;
 }
-.section--lk--form .section--reg--akkaunt .active-akk .phbg {
+.section--reg--akkaunt .active-akk .phbg {
   display: block;
 }
-.section--lk--form .section--reg--akkaunt .active-akk .stickizz .stick-off {
+.section--reg--akkaunt .active-akk .stickizz .stick-off {
   display: inline-block;
   float: left;
   width: 21px;
@@ -6097,11 +6217,11 @@ footer .foot-info .end-block .parus a:hover {
   border-radius: 25px;
   background: #18db61;
 }
-.section--lk--form .section--reg--akkaunt .active-akk .stickizz .stick-txt-l {
+.section--reg--akkaunt .active-akk .stickizz .stick-txt-l {
   display: none;
   float: left;
 }
-.section--lk--form .section--reg--akkaunt .active-akk .stickizz .stick-txt-r {
+.section--reg--akkaunt .active-akk .stickizz .stick-txt-r {
   display: inline-block;
   float: right;
   font-family: 'proxima_nova_ltlight', sans-serif;
@@ -6155,6 +6275,10 @@ div[data-role="editor-toolbar"] {
   .section--lk--form .content .float-content {
     width: 70%;
   }
+  .section--lk--form .content .float-content .one-tc {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .section--lk--form .float--left--menu {
@@ -6163,6 +6287,10 @@ div[data-role="editor-toolbar"] {
   .section--lk--form .content .float-content {
     width: 100%;
     margin-top: 25px;
+  }
+  .section--lk--form .content .float-content .one-tc {
+    width: 100%;
+    margin: 10px 0;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 767px) {
@@ -6175,6 +6303,10 @@ div[data-role="editor-toolbar"] {
   }
   .section--lk--form .section--reg--akkaunt .section--reg--akkaunt--one {
     width: 100%;
+  }
+  .section--lk--form .content .float-content .one-tc {
+    width: 100%;
+    margin: 10px 0;
   }
 }
 @media screen and (min-width: 420px) and (max-width: 599px) {
@@ -6199,6 +6331,13 @@ div[data-role="editor-toolbar"] {
   .section--lk--form .section--reg--akkaunt {
     margin-left: 0px;
   }
+  .section--lk--form .content .float-content .one-tc {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .section--lk--form .content .float-content {
+    min-height: 0px;
+  }
 }
 @media screen and (max-width: 419px) {
   .section--lk--form .float--left--menu {
@@ -6210,6 +6349,8 @@ div[data-role="editor-toolbar"] {
   }
   .section--lk--form .section--reg--akkaunt .section--reg--akkaunt--one {
     width: 100%;
+    border: solid 0px;
+    margin: 10px 0;
   }
   .section--lk--form .content .float-content {
     padding: 30px 25px;
@@ -6221,6 +6362,81 @@ div[data-role="editor-toolbar"] {
   }
   .section--lk--form .section--reg--akkaunt {
     margin-left: 0px;
+  }
+  .section--lk--form .section--lk--form--block {
+    margin-left: 0px;
+  }
+  .section--lk--form .section--lk--form--block .input-block .blue {
+    width: 100%;
+  }
+  .section--lk--form .section--lk--form--block .input-block .button {
+    width: 100%;
+  }
+  .section--lk--form h1,
+  .section--lk--form h2 {
+    text-align: left;
+    margin-top: 0px;
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #5e5e5e;
+    font-size: 20px;
+    font-family: 'proxima_nova_ltlight', sans-serif;
+  }
+  .section--lk--form h2 {
+    text-align: left;
+    margin-top: 35px;
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #5e5e5e;
+    font-size: 20px;
+    font-family: 'proxima_nova_ltlight', sans-serif;
+  }
+  .section--lk--form .content .float-content .one-tc {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .section--lk--form .content .cat-tc-one {
+    padding: 30px 0px 0;
+    margin-bottom: 0px !important;
+  }
+  .section--lk--form .content .float-content .title-bar h2 {
+    margin: 0px 0px 20px;
+    font-weight: 300;
+    color: #525252;
+    font-size: 20px;
+  }
+  .section--lk--form .content .float-content .title-bar h2 a {
+    font-size: 16px;
+    margin-top: 0px;
+  }
+  .section--lk--form .content .float-content {
+    min-height: 0px;
+  }
+  .cat-tc-one .title-bar {
+    float: left;
+    width: 100%;
+    margin: 20px 0;
+    border-left: solid 10px #fafafa;
+    border-right: solid 10px #fafafa;
+  }
+  h2 {
+    margin: 25px 0 35px;
+  }
+  .section--lk--form .content .float-content {
+    padding: 30px 25px;
+    margin-bottom: 0px;
+    min-height: 750px;
+  }
+  .section--lk--form .content .float-content {
+    padding: 30px 0px 0px;
+    margin-bottom: -30px;
+    min-height: 0px;
+  }
+  .section--lk--form .content .paginaters {
+    padding: 0px 0px !important;
+    margin-bottom: 0px !important;
   }
 }
 .page--inform {
