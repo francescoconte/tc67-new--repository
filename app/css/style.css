@@ -5442,6 +5442,30 @@ footer .foot-info .end-block .parus a:hover {
     padding: 0px 25px 50px;
   }
 }
+.input-button {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-family: 'ProximaNovaBold', sans-serif;
+  padding: 18px 45px;
+  text-transform: uppercase;
+  color: #232425;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #18db61;
+}
+.input-button:hover {
+  position: relative;
+  display: inline-block;
+  background-color: #0dc652;
+  color: #fff !important;
+}
 .section--reg--form {
   width: 100%;
   float: left;

@@ -1,5 +1,30 @@
 @import "grundfile.less";
 
+    
+.input-button {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'ProximaNovaBold', sans-serif;
+    padding: 18px 45px;
+    text-transform: uppercase;
+    color: #232425;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: @colfirm;  
+}
+
+
+
+.input-button:hover {position: relative; display: inline-block;  background-color: #0dc652;  color: #fff !important;}
+
+
 .section--reg--form {width: 100%;float: left; background: #fafafa;
 .content {
 .float-content {float: left;  padding: 30px 0;   width: 100%; background: #fff;  margin-bottom: 70px;
@@ -19,6 +44,7 @@ min-height: 750px;} }
 .input-block {float: left; width: 50%; border: solid 9px transparent;
 input {display: block; width: 100%; border: solid 1px #dddddd; padding: 20px; color: @coltxt;}        
 }
+
     
 .input-block-text {float: left; width: 100%; border: solid 9px transparent;
 ::-webkit-input-placeholder {color:#dddddd;}
