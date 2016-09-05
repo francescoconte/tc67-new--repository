@@ -283,7 +283,7 @@
 <!-- one block -->   
    
 <!-- one block -->  
-<div id="akk3" class="section--reg--akkaunt--one active-akk">
+<div id="akk3" class="section--reg--akkaunt--one">
 <div class="ph-image" style="background: url(img/ak3.jpg)"></div>
 <div class="phbg"></div>
 <span class="ak-title">Арендатор</span>
@@ -296,7 +296,7 @@
 <!-- one block -->   
    
 <!-- one block -->  
-<div id="akk4" class="section--reg--akkaunt--one">
+<div id="akk4" class="section--reg--akkaunt--one active-akk">
 <div class="ph-image" style="background: url(img/ak4.jpg)"></div>
 <div class="phbg"></div>
 <span class="ak-title">Арендодатель</span>
@@ -712,7 +712,7 @@ $(document).ready(function() {
       $('#akk3').removeClass('active-akk');
       akk3 = 0;
       }
-      if (akk2 + akk3 + akk4 == 0)  { $('#inputorg').fadeIn(0);} else {$('#inputorg').fadeOut(0);}
+      if (akk2 + akk3 + akk4 != 0)  { $('#inputorg').fadeIn(0);} else {$('#inputorg').fadeOut(0);}
        }); 
       
      
