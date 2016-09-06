@@ -3261,6 +3261,8 @@ nav .top-menu li .login:hover span {
 }
 .cat-tc-one .title-bar h2 {
   float: left;
+  width: auto;
+  margin: 0px;
 }
 .cat-tc-one .title-bar h2 a {
   font-size: 20px;
@@ -3753,6 +3755,16 @@ nav .top-menu li .login:hover span {
 .cat-tc-one .paginator .active {
   color: #2ea0f0;
   border: solid 1px #2ea0f0;
+}
+.cat-tc-one .paginator .back {
+  color: #fff;
+  background: #2ea0f0;
+}
+.cat-tc-one .paginator .dot {
+  cursor: auto;
+}
+.cat-tc-one .paginator .dot:hover {
+  border: solid 1px #fff !important;
 }
 .cat-tc-one .paginator .nexty {
   color: #fff;
@@ -4831,6 +4843,7 @@ footer .foot-info .end-block .parus a:hover {
 }
 .tc--page--sl-title .tc--page--info h1 {
   text-align: center;
+  color: #fff;
 }
 .tc--page--sl-title .tc--page--info .tc--page--info--desc {
   display: block;
@@ -4839,6 +4852,8 @@ footer .foot-info .end-block .parus a:hover {
   margin-top: 25px;
   height: 22px;
   text-align: center;
+  float: left;
+  width: 100%;
 }
 .tc--page--sl-title .tc--page--info .tc--page--info--desc .mapy {
   display: inline-block;
@@ -4851,6 +4866,8 @@ footer .foot-info .end-block .parus a:hover {
   background: url(../img/icon--map--tc.png);
 }
 .tc--page--sl-title .tc--page--info .tc--page--info--buttons {
+  float: left;
+  width: 100%;
   display: block;
   margin-top: 35px;
   text-align: center;
@@ -5825,6 +5842,15 @@ footer .foot-info .end-block .parus a:hover {
 #inputorg {
   display: none;
 }
+.btn-group {
+  float: left;
+  margin-right: 5px;
+  display: inline-block;
+}
+.btn-group a {
+  display: inline-block;
+  margin-right: 5px;
+}
 .section--lk--form {
   width: 100%;
   float: left;
@@ -6259,7 +6285,7 @@ h2 {
   background-color: white;
   border-collapse: separate;
   border: 1px solid #f7f7f7;
-  padding: 4px;
+  padding: 15px;
   box-sizing: content-box;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
@@ -6270,6 +6296,7 @@ h2 {
   font-family: 'ProximaNovaRegular' !important;
   font-size: 14px;
   line-height: 1.4;
+  width: 100%;
 }
 #voiceBtn {
   width: 20px;
