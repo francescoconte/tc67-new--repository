@@ -6022,6 +6022,75 @@ footer .foot-info .end-block .parus a:hover {
 .float--left--menu .left--menu--block ul li:last-child {
   border-bottom: 0px solid;
 }
+.img--load--block {
+  float: left;
+  width: 100%;
+  height: 245px;
+  display: table;
+  text-align: center;
+  border: dotted 1px #c9c9c9;
+  border-radius: 10px;
+}
+.img--load--block img {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: auto;
+}
+.img--load--block .but-blue {
+  background: #2ea0f0;
+  border: solid 1px #2ea0f0;
+  color: #fff;
+  padding: 18px 45px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'ProximaNovaBold', sans-serif;
+}
+.img--load--block .fileUpload {
+  background: #2ea0f0;
+  border: solid 1px #2ea0f0;
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 28px;
+  position: relative;
+}
+.img--load--block .fileUpload span {
+  padding: 18px 45px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'ProximaNovaBold', sans-serif;
+  display: inline-block;
+}
+.img--load--block .fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.upload--image--block-fix {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  opacity: 0.45;
+  display: none;
+}
+.upload--image--block-fix .ad-table {
+  position: absolute;
+  display: table;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
 h1,
 h2 {
   text-align: left;

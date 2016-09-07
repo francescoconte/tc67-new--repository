@@ -16,10 +16,11 @@
 <link rel="stylesheet" type="text/css" href="css/animations.css"> 
 <link rel="stylesheet" type="text/css" href="css/style.css"> 
 <link rel="stylesheet" href="css/jquery-ui-1.8.19.custom.css">
+    
 <!-- endbuild --> 
 <script src='https://www.google.com/recaptcha/api.js'></script>   
     
-<link href="css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+
 <link href="css/font-awesome.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="external/jquery.hotkeys.js"></script>
@@ -27,7 +28,63 @@
 <script src="external/google-code-prettify/prettify.js"></script>
 <script src="js/bootstrap-wysiwyg.js"></script>
     
-    
+    <style>
+        .container
+        {
+            float: left; width: 100%; margin-top: 250px;
+            
+        }
+        .action
+        {
+            width: 400px;
+            height: 30px;
+            margin: 10px 0;
+        }
+        .cropped>img
+        {
+            margin-right: 10px;
+        }
+        
+.imageBox
+{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border:1px solid #aaa;
+    background: #fff;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    cursor:move;
+}
+
+.imageBox .thumbBox
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    box-sizing: border-box;
+    border: 1px solid rgb(102, 102, 102);
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    background: none repeat scroll 0% 0% transparent;
+}
+
+.imageBox .spinner
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    line-height: 400px;
+    background: rgba(0,0,0,0.7);
+}
+        
+    </style>   
     
     
     
@@ -345,63 +402,70 @@
     
 <h2>Описание</h2>    
 <p>Прикрепите логотип вашей компании размером до 150x150</p> 
-    
-<div class="section--reg--akkaunt">
 
-<!-- one block -->  
-<div id="akk1" class="section--reg--akkaunt--one active-akk ">
-<div class="ph-image" style="background: url(img/ak1.jpg)"></div>
-<div class="phbg"></div>
-<span class="ak-title">Покупатель</span>
-<div id="stickizz1" class="stickizz">
-<span class="stick-txt-l">Выкл.</span> 
-<span class="stick-txt-r">Вкл.</span>
-<i class="stick-off"></i></div>
-</div>    
-<!-- one block -->   
-  
-<!-- one block -->  
-<div id="akk2" class="section--reg--akkaunt--one">
-<div class="ph-image" style="background: url(img/ak2.jpg)"></div>
-<div class="phbg"></div>
-<span class="ak-title">Собственник магазина</span>
-<div id="stickizz2" class="stickizz">
-<span class="stick-txt-l">Выкл.</span> 
-<span class="stick-txt-r">Вкл.</span>
-<i class="stick-off"></i></div>
-</div>    
-<!-- one block -->   
+<div class="img--load--block">
+<div class="middle">    
+<img src="img/img-block.jpg"> 
+    
+<div class="fileUpload btn btn-primary">
+<span>Загрузить фото</span>
+<input id="uploadBtn" type="file" class="upload" />   
+<br>    
    
-<!-- one block -->  
-<div id="akk3" class="section--reg--akkaunt--one">
-<div class="ph-image" style="background: url(img/ak3.jpg)"></div>
-<div class="phbg"></div>
-<span class="ak-title">Арендатор</span>
-<div id="stickizz3" class="stickizz">
-<span class="stick-txt-l">Выкл.</span> 
-<span class="stick-txt-r">Вкл.</span>
-<i class="stick-off"></i></div>
-</div>    
-<!-- one block -->   
-<!-- one block -->   
-   
-<!-- one block -->  
-<div id="akk4" class="section--reg--akkaunt--one">
-<div class="ph-image" style="background: url(img/ak4.jpg)"></div>
-<div class="phbg"></div>
-<span class="ak-title">Арендодатель</span>
-<div id="stickizz4" class="stickizz">
-<span class="stick-txt-l">Выкл.</span> 
-<span class="stick-txt-r">Вкл.</span>
-<i class="stick-off"></i></div>
-</div>    
-<!-- one block -->   
+</div>
+</div>
+</div> 
     
     
-</div>     
-    
-    
-    
+
+<script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+<script src="js/cropbox.js"></script>
+<div class="container">
+    <div class="imageBox">
+        <div class="thumbBox"></div>
+        <div class="spinner" style="display: none">Loading...</div>
+    </div>
+    <div class="action">
+        <input type="file" id="file" style="float:left; width: 250px">
+        <input type="button" id="btnCrop" value="Crop" style="float: right">
+        <input type="button" id="btnZoomIn" value="+" style="float: right">
+        <input type="button" id="btnZoomOut" value="-" style="float: right">
+    </div>
+    <div class="cropped">
+
+    </div>
+</div>
+<script type="text/javascript">
+    YUI().use('node', 'crop-box', function(Y){
+        var options =
+        {
+            imageBox: '.imageBox',
+            thumbBox: '.thumbBox',
+            spinner: '.spinner',
+            imgSrc: 'avatar.png'
+        }
+        var cropper = new Y.cropbox(options);
+        Y.one('#file').on('change', function(){
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                options.imgSrc = e.target.result;
+                cropper = new Y.cropbox(options);
+            }
+            reader.readAsDataURL(this.get('files')._nodes[0]);
+            this.get('files')._nodes = [];
+        })
+        Y.one('#btnCrop').on('click', function(){
+            var img = cropper.getDataURL()
+            Y.one('.cropped').append('<img src="'+img+'">');
+        })
+        Y.one('#btnZoomIn').on('click', function(){
+            cropper.zoomIn();
+        })
+        Y.one('#btnZoomOut').on('click', function(){
+            cropper.zoomOut();
+        })
+    })
+</script>
     
     
 </div>    
@@ -583,18 +647,7 @@
     
 </div>
 </section>
-     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+ 
 <footer>
 <div class="content">
     
@@ -720,7 +773,16 @@
 
     
     
+<script>
     
+document.getElementById("uploadBtn").onchange = function () {
+    document.getElementById("target").setAttribute('src' , this.value);
+
+    alert(this.value)
+};
+    
+</script>
+   
 
 
 
@@ -733,92 +795,11 @@
 <script src="js/valid-form.js"></script> 
 <script type="text/javascript" src="js/jquery-ui-1.8.19.custom.min.js"></script> 
 <script src="js/any.js"></script>
-<script>
-	$(function() {
-		$( "#slider_price" ).slider({
-			range: true,
-			min: 0,
-			max: 5000,
-			values: [ 0, 5000 ],
-			slide: function( event, ui ) {
-				//Поле минимального значения
-				$( "#price" ).val(ui.values[ 0 ]);
-				//Поле максимального значения
-				$("#price2").val(ui.values[1]);			}
-		});
-		//Записываем значения ползунков в момент загрузки страницы
-		//То есть значения по умолчанию
-		$( "#price" ).val($( "#slider_price" ).slider( "values", 0 ));
-		$("#price2").val($("#slider_price").slider( "values", 1 ));
-	});
-</script>
+
+
+
+<link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />    
     
-<script>
-$(document).ready(function() {
-   var akk1 = 1; akk2 = 0; akk3 = 0; akk4 = 0; // registration stick
-     
-     
- // registration stick code
-     
-      $('#stickizz1').click(function() {
-      if (akk1 == 0) {
-      $('#akk1').addClass('active-akk');
-      akk1 = 1;
-      }
-      else {
-      $('#akk1').removeClass('active-akk');
-      akk1 = 0;
-      }
-     
-       }); 
-     
-     
-     
-      $('#stickizz2').click(function() {
-      if (akk2 == 0) {
-      $('#akk2').addClass('active-akk');
-      akk2 = 1;
-      }
-      else {
-      $('#akk2').removeClass('active-akk');
-      akk2 = 0;
-      }
-     
-       }); 
-      
-     
-      $('#stickizz3').click(function() {
-      if (akk3 == 0) {
-      $('#akk3').addClass('active-akk');
-      akk3 = 1;
-      }
-      else {
-      $('#akk3').removeClass('active-akk');
-      akk3 = 0;
-      }
-     
-       }); 
-      
-     
-      $('#stickizz4').click(function() {
-      if (akk4 == 0) {
-      $('#akk4').addClass('active-akk');
-      akk4 = 1;
-      }
-      else {
-      $('#akk4').removeClass('active-akk');
-      akk4 = 0;
-      }
-     
-       });        }); 
-      
-
-    
-</script>
-   
-
-
-
     
 </body>
 </html>
