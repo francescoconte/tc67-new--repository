@@ -29,60 +29,7 @@
 <script src="js/bootstrap-wysiwyg.js"></script>
     
     <style>
-        .container
-        {
-            float: left; width: 100%; margin-top: 250px;
-            
-        }
-        .action
-        {
-            width: 400px;
-            height: 30px;
-            margin: 10px 0;
-        }
-        .cropped>img
-        {
-            margin-right: 10px;
-        }
-        
-.imageBox
-{
-    position: relative;
-    height: 400px;
-    width: 400px;
-    border:1px solid #aaa;
-    background: #fff;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    cursor:move;
-}
 
-.imageBox .thumbBox
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    margin-top: -100px;
-    margin-left: -100px;
-    box-sizing: border-box;
-    border: 1px solid rgb(102, 102, 102);
-    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
-    background: none repeat scroll 0% 0% transparent;
-}
-
-.imageBox .spinner
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    text-align: center;
-    line-height: 400px;
-    background: rgba(0,0,0,0.7);
-}
         
     </style>   
     
@@ -340,10 +287,10 @@
 </div>
 </div>  
     
-<div class="float-content">
+<form class="float-content">
 
 <h1>Контактная информация</h1>
-<form class="section--reg--form--block">
+<div class="section--reg--form--block">
 
 <div class="input-block"><input type="text" placeholder="Название бренда*"></div>    
 <div class="input-block"><input type="text" placeholder="Город*"></div>    
@@ -353,7 +300,7 @@
   
 <div class="input-block"><input type="password" placeholder="Арендная ставка за кв.м. в год"></div>     
     
-</form>      
+</div>      
 
 <h2>Описание</h2>    
 <p>Опишите вашу компанию и каким требованиям должна удовлетворять предлагаемая площадь</p>    
@@ -377,18 +324,18 @@
           </ul>
         </div>
       <div class="btn-group">
-        <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
-        <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
-        <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="icon-strikethrough"></i></a>
+        <a class="btn" data-edit="bold"><i class="icon-bold"></i></a>
+        <a class="btn" data-edit="italic"><i class="icon-italic"></i></a>
+        <a class="btn" data-edit="strikethrough"><i class="icon-strikethrough"></i></a>
       </div>
       <div class="btn-group">
-        <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a>
-        <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a>
+        <a class="btn" data-edit="insertunorderedlist"><i class="icon-list-ul"></i></a>
+        <a class="btn" data-edit="insertorderedlist"><i class="icon-list-ol"></i></a>
       </div>
 
       <div class="btn-group">
-        <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a>
-        <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>
+        <a class="btn" data-edit="undo"><i class="icon-undo"></i></a>
+        <a class="btn" data-edit="redo"><i class="icon-repeat"></i></a>
       </div>
       <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
     </div>
@@ -400,24 +347,11 @@
     
 <!-- editor -->    
     
-<h2>Описание</h2>    
-<p>Прикрепите логотип вашей компании размером до 150x150</p> 
+<h2>Прикрепить логотип</h2>    
+<p>Прикрепите логотип вашей компании размером до 500px (jpeg/png)</p> 
 
 <div class="img--load--block">
 <div class="middle">    
-<img src="img/img-block.jpg"> 
-    
-<div class="fileUpload btn btn-primary">
-<span>Загрузить фото</span>
-<input id="uploadBtn" type="file" class="upload" />   
-<br>    
-   
-</div>
-</div>
-</div> 
-    
-    
-
 <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
 <script src="js/cropbox.js"></script>
 <div class="container">
@@ -426,49 +360,49 @@
         <div class="spinner" style="display: none">Loading...</div>
     </div>
     <div class="action">
-        <input type="file" id="file" style="float:left; width: 250px">
-        <input type="button" id="btnCrop" value="Crop" style="float: right">
+        <a class="fileUpload"><span>выбрать изображение</span><input type="file" id="file" class="upload"></a>
+        <div class="zoooms">
+        <input type="button" id="btnCrop" value="Сохранить" style="float: right">
         <input type="button" id="btnZoomIn" value="+" style="float: right">
         <input type="button" id="btnZoomOut" value="-" style="float: right">
+        </div>    
     </div>
     <div class="cropped">
 
     </div>
 </div>
-<script type="text/javascript">
-    YUI().use('node', 'crop-box', function(Y){
-        var options =
-        {
-            imageBox: '.imageBox',
-            thumbBox: '.thumbBox',
-            spinner: '.spinner',
-            imgSrc: 'avatar.png'
-        }
-        var cropper = new Y.cropbox(options);
-        Y.one('#file').on('change', function(){
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                options.imgSrc = e.target.result;
-                cropper = new Y.cropbox(options);
-            }
-            reader.readAsDataURL(this.get('files')._nodes[0]);
-            this.get('files')._nodes = [];
-        })
-        Y.one('#btnCrop').on('click', function(){
-            var img = cropper.getDataURL()
-            Y.one('.cropped').append('<img src="'+img+'">');
-        })
-        Y.one('#btnZoomIn').on('click', function(){
-            cropper.zoomIn();
-        })
-        Y.one('#btnZoomOut').on('click', function(){
-            cropper.zoomOut();
-        })
-    })
-</script>
+
+</div>
+</div> 
     
     
+
+<h2>Загрузить фото</h2>    
+<p>Прикрепите от 3 до 5 фотографий о компании в формате pnp или jpg.</p> 
+
+<div id="photo-block" class="img--load--block load--block-big">
+<div class="middle">    
+<output id="list"></output> 
+    
+<div class="fileUpload btn btn-primary">
+<span>Загрузить фото</span>
+<input type="file" id="files" name="files[]" multiple  class="upload" />   
+<br>    
+   
+</div>
+</div>
+</div> 
+
+<div class="terms-of-use">
+<input type="checkbox" required="">
+<span>Я ознакомлен и согласен <a target="_blank" href="#">с правилами размещения объявлений</a> на сайте.</span> 
 </div>    
+<div class="block-buttons">
+<a class="button">
+<span>Добавить</span>    
+</a> 
+</div>    
+</form>    
 </div>        
 </section>
   
@@ -481,7 +415,7 @@
 <div class="content tcw2">   
 <!-- title bar -->
 <div class="title-bar">
-<h2 class="center-align">Рекомендуем обратить внимание </h2>    
+<h2 class="center-align recom">Рекомендуем обратить внимание </h2>    
 </div>    
 <!-- title bar -->
     
@@ -774,17 +708,70 @@
     
     
 <script>
-    
-document.getElementById("uploadBtn").onchange = function () {
-    document.getElementById("target").setAttribute('src' , this.value);
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
 
-    alert(this.value)
-};
-    
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          var span = document.createElement('span');
+          span.innerHTML = ['<img class="thumb" src="', e.target.result,
+                            '" title="', escape(theFile.name), '"/>'].join('');
+          document.getElementById('list').insertBefore(span, null);
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
    
 
-
+<script type="text/javascript">
+    YUI().use('node', 'crop-box', function(Y){
+        var options =
+        {
+            imageBox: '.imageBox',
+            thumbBox: '.thumbBox',
+            spinner: '.spinner',
+            imgSrc: 'avatar.png'
+        }
+        var cropper = new Y.cropbox(options);
+        Y.one('#file').on('change', function(){
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                options.imgSrc = e.target.result;
+                cropper = new Y.cropbox(options);
+            }
+            reader.readAsDataURL(this.get('files')._nodes[0]);
+            this.get('files')._nodes = [];
+        })
+        Y.one('#btnCrop').on('click', function(){
+            var img = cropper.getDataURL()
+            Y.one('.cropped').append('<img src="'+img+'">');
+        })
+        Y.one('#btnZoomIn').on('click', function(){
+            cropper.zoomIn();
+        })
+        Y.one('#btnZoomOut').on('click', function(){
+            cropper.zoomOut();
+        })
+    })
+</script>
 
 
 <script src="js/responsiveslides.min.js"></script>

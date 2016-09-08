@@ -5839,8 +5839,35 @@ footer .foot-info .end-block .parus a:hover {
     width: 80%;
   }
 }
+#list {
+  position: relative;
+  display: block;
+  width: 100%;
+  float: left;
+}
+#list span {
+  position: relative;
+  display: block;
+  width: 100%;
+  float: left;
+}
+#list span img {
+  position: relative;
+  display: block;
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
+h2.recom {
+  text-align: center !important;
+  width: 100% !important;
+}
 #inputorg {
   display: none;
+}
+.btn-toolbar {
+  float: left;
+  padding: 10px;
 }
 .btn-group {
   float: left;
@@ -5855,6 +5882,13 @@ footer .foot-info .end-block .parus a:hover {
   width: 100%;
   float: left;
   background: #fafafa;
+}
+.section--lk--form .block-buttons {
+  text-align: left;
+  padding: 25px 0;
+}
+.section--lk--form .block-buttons .button {
+  margin: 0;
 }
 .section--lk--form .button-redact {
   position: absolute;
@@ -5879,6 +5913,15 @@ footer .foot-info .end-block .parus a:hover {
   font-size: 12px;
   color: #fff;
   margin-bottom: 10px;
+}
+.section--lk--form .button-redact .adress i.map {
+  background-position: CENTER CENTER !important;
+  background-repeat: no-repeat !important;
+  background-size: contain!important;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/st-map.svg);
 }
 .section--lk--form .button-redact .line {
   float: left;
@@ -5962,6 +6005,33 @@ footer .foot-info .end-block .parus a:hover {
 }
 .section--lk--form .content p {
   padding: 0 10px 32px;
+  width: 100%;
+  float: left;
+}
+.section--lk--form .content .terms-of-use {
+  float: left;
+  width: 100%;
+  text-align: left;
+  margin: 35px 0;
+}
+.section--lk--form .content .terms-of-use input {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: solid 1px #dddddd;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-bottom: -6px;
+}
+.section--lk--form .content .terms-of-use span {
+  display: inline-block;
+  top: -10px;
+  top: -5px;
+  position: relative;
+}
+.section--lk--form .content .terms-of-use span a {
+  font-family: 'ProximaNovaBold', sans-serif;
+  color: #232425;
 }
 .lk input {
   width: 378px !important;
@@ -6024,7 +6094,7 @@ footer .foot-info .end-block .parus a:hover {
 }
 .img--load--block {
   float: left;
-  width: 100%;
+  width: 70%;
   height: 245px;
   display: table;
   text-align: center;
@@ -6052,7 +6122,6 @@ footer .foot-info .end-block .parus a:hover {
   color: #fff;
   display: inline-block;
   cursor: pointer;
-  margin-top: 28px;
   position: relative;
 }
 .img--load--block .fileUpload span {
@@ -6061,6 +6130,30 @@ footer .foot-info .end-block .parus a:hover {
   text-align: center;
   font-family: 'ProximaNovaBold', sans-serif;
   display: inline-block;
+}
+.img--load--block .action {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 50px;
+  left: 0px;
+  padding: 18px 45px;
+  font-family: 'ProximaNovaBold', sans-serif;
+}
+.img--load--block .action .zoooms {
+  position: absolute;
+  display: block;
+  right: 5px;
+  bottom: 270px;
+}
+.img--load--block .action .zoooms input {
+  background: #2ea0f0;
+  border: solid 1px #2ea0f0;
+  color: #fff;
+  font-family: 'ProximaNovaBold', sans-serif;
+  font-size: 24px;
+  padding: 12px 18px;
+  margin: 5px;
 }
 .img--load--block .fileUpload input.upload {
   position: absolute;
@@ -6074,6 +6167,12 @@ footer .foot-info .end-block .parus a:hover {
   cursor: pointer;
   opacity: 0;
   filter: alpha(opacity=0);
+}
+.load--block-big {
+  width: 100%;
+}
+.load--block-big .fileUpload {
+  margin: 28px;
 }
 .upload--image--block-fix {
   position: fixed;
@@ -6090,6 +6189,57 @@ footer .foot-info .end-block .parus a:hover {
   left: 0px;
   width: 100%;
   height: 100%;
+}
+.container {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.action {
+  width: 400px;
+  height: 30px;
+  margin: 10px 0;
+}
+.cropped > img {
+  position: absolute;
+  display: block;
+  margin-right: 10px;
+  right: -250px;
+  top: 0px;
+}
+.imageBox {
+  position: relative;
+  float: left;
+  height: 400px;
+  width: 100%;
+  border: 1px solid #aaa;
+  background: #fff;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  cursor: move;
+}
+.imageBox .thumbBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  box-sizing: border-box;
+  border: 1px solid #666666;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  background: none repeat scroll 0% 0% transparent;
+}
+.imageBox .spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  line-height: 400px;
+  background: rgba(0, 0, 0, 0.7);
 }
 h1,
 h2 {
@@ -6388,6 +6538,9 @@ div[data-role="editor-toolbar"] {
 .dropdown-menu a {
   cursor: pointer;
 }
+.cat-tc-one .one-tc .one-info .shops .graybut span {
+  color: #232425;
+}
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
   .section--lk--form .float--left--menu {
     width: 30%;
@@ -6557,6 +6710,52 @@ div[data-role="editor-toolbar"] {
   .section--lk--form .content .paginaters {
     padding: 0px 0px !important;
     margin-bottom: 0px !important;
+  }
+  .section--lk--form .button-redact .redact {
+    font-size: 10px;
+    color: #232425;
+    background: #eeeeee;
+    padding: 6px 7px;
+    border-radius: 25px;
+    margin-right: 10px;
+    float: left;
+  }
+  .section--lk--form .content .float-content .one-tc .mag--but-block .redact {
+    font-size: 11px;
+    color: #232425;
+    background: #eee;
+    padding: 5px 6px;
+    border-radius: 25px;
+    margin-right: 10px;
+  }
+  .cat-tc-one .one-tc .one-info .mag {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: solid 1px #e8e8e8;
+    padding: 0 0px 15px;
+    height: 100px;
+  }
+  .cat-tc-one .one-tc .one-info .shops .but-blue {
+    position: relative;
+    display: inline-block;
+    background: #2ea0f0;
+    float: right;
+    border-radius: 25px;
+    margin-right: 2px;
+  }
+  .cat-tc-one .one-tc .one-info .shops .date-ar {
+    margin-top: 8px;
+    display: inline-block;
+    font-size: 12px;
+  }
+  .cat-tc-one .one-tc .tc--content-info-one .mag--but-block {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+  }
+  .section--lk--form .content .float-content .title-bar h2 a {
+    display: none;
   }
 }
 .page--inform {
