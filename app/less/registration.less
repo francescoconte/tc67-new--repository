@@ -44,7 +44,7 @@ min-height: 750px;} }
 .input-block {float: left; width: 50%; border: solid 9px transparent;
 input {display: block; width: 100%; border: solid 1px #dddddd; padding: 20px; color: @coltxt;}        
 }
-
+.input-block-big {width: 100%;}
     
 .input-block-text {float: left; width: 100%; border: solid 9px transparent;
 ::-webkit-input-placeholder {color:#dddddd;}
@@ -93,8 +93,14 @@ margin-right: 20px; margin-bottom: -6px;
 span {display: inline-block; top:-10px;    top: -5px;  position: relative;    a{font-family: @fontB; color: @coltxt;}}
 }
 
-.capcha {float: left; width: 100%; text-align: center;}    
-    .g-recaptcha{display: inline-block;}
+.capcha {float: left; width: 100%; text-align: center;}
+.log-in {margin-top: 15px;
+p {float: left; display: block;margin-top: 15px; text-align: center; width: 100%;
+a { font-size: 16px; color: @colfirm2; }
+    }   
+}
+.g-recaptcha{display: inline-block;}
+a, input {min-width: 250px; margin: 0 10px;}
 }
 
 .feed-capcha {margin-top: 35px;}
@@ -140,7 +146,10 @@ span {display: inline-block; top:-10px;    top: -5px;  position: relative;    a{
     padding: 0 25px;
 }
       
-    
+.section--reg--form a, .section--reg--form input {
+    min-width: 250px;
+    margin: 0 0px;
+}    
     
 } 
 
@@ -274,7 +283,17 @@ span {display: inline-block; top:-10px;    top: -5px;  position: relative;    a{
     float: right;
     width: 80%;
 }
- 
+
+.section--reg--form a, .section--reg--form input {
+    min-width: 250px;
+    margin: 0 0px;
+}  
+    
+.section--reg--form .log-in p a {
+    font-size: 12px;
+    color: #2ea0f0;
+}
+    
     
 }
 

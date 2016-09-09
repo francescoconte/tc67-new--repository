@@ -5541,6 +5541,9 @@ footer .foot-info .end-block .parus a:hover {
   padding: 20px;
   color: #232425;
 }
+.section--reg--form .section--reg--form--block .input-block-big {
+  width: 100%;
+}
 .section--reg--form .section--reg--form--block .input-block-text {
   float: left;
   width: 100%;
@@ -5705,8 +5708,27 @@ footer .foot-info .end-block .parus a:hover {
   width: 100%;
   text-align: center;
 }
+.section--reg--form .log-in {
+  margin-top: 15px;
+}
+.section--reg--form .log-in p {
+  float: left;
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+}
+.section--reg--form .log-in p a {
+  font-size: 16px;
+  color: #2ea0f0;
+}
 .section--reg--form .g-recaptcha {
   display: inline-block;
+}
+.section--reg--form a,
+.section--reg--form input {
+  min-width: 250px;
+  margin: 0 10px;
 }
 .feed-capcha {
   margin-top: 35px;
@@ -5733,6 +5755,11 @@ footer .foot-info .end-block .parus a:hover {
   }
   .section--reg--form .section--reg--akkaunt {
     padding: 0 25px;
+  }
+  .section--reg--form a,
+  .section--reg--form input {
+    min-width: 250px;
+    margin: 0 0px;
   }
 }
 @media screen and (min-width: 420px) and (max-width: 599px) {
@@ -5837,6 +5864,15 @@ footer .foot-info .end-block .parus a:hover {
   .section--reg--form .terms-of-use span {
     float: right;
     width: 80%;
+  }
+  .section--reg--form a,
+  .section--reg--form input {
+    min-width: 250px;
+    margin: 0 0px;
+  }
+  .section--reg--form .log-in p a {
+    font-size: 12px;
+    color: #2ea0f0;
   }
 }
 #list {
