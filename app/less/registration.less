@@ -61,6 +61,10 @@ border: solid 9px #fafafa; height: 300px; background: @coltxt; position: relativ
 .ph-image {position: absolute; display: block; width: 100%; height: 100%; top:0px; left:0px;
 .bgCC; opacity: 0.55; }
 .phbg{position: absolute; width: 100%; height: 100%; top:0px; left:0px; opacity: 0.75; background: #18db61; display: none;}
+@-moz-document url-prefix()
+{
+.phbg{border: solid 9px #fff;}
+}
 .ak-title {text-align: center; .middle; font-size: 26px; font-family: @fontB; color: #fff;}
 .stickizz {position: absolute; display: block; top:27px; right: 27px; height: 25px; width: 60px;
 border-radius: 25px; background: #fff; border: solid 2px #fff; cursor: pointer;

@@ -2147,15 +2147,63 @@ nav .top-menu li .login:hover span {
 .a-table--body-vip {
   width: 412px;
   float: right;
+  padding: 20px;
+  padding-top: 45px;
 }
-.a-table--body-vip .vip-title {
-  height: 45px;
+.a-table--body-vip .one--teeser--block {
+  position: relative;
+  display: block;
   float: left;
   width: 100%;
-  color: #232425;
-  font-family: 'proxima_nova_ltlight', sans-serif;
-  font-size: 24px;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 35px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.a-table--body-vip .one--teeser--block .one--teeser--stick {
+  position: relative;
+  float: left;
+  width: 100%;
   text-align: center;
+  margin-top: -26px;
+}
+.a-table--body-vip .one--teeser--block .one--teeser--stick span {
+  display: inline-block;
+  font-size: 24px;
+  font-family: 'ProximaNovaBold', sans-serif;
+  color: #232425;
+  background: #fafafa;
+  padding: 12px;
+}
+.a-table--body-vip .one--teeser--block img {
+  float: left;
+  margin: 20px 0 10px;
+  padding: 0px 30px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.a-table--body-vip .one--teeser--block h4 {
+  float: left;
+  display: block;
+  font-size: 18px;
+  font-family: 'ProximaNovaBold', sans-serif;
+  color: #232425;
+  text-align: center;
+  line-height: 1.7;
+  padding: 20px 25px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.a-table--body-vip .one--teeser--block:hover {
+  border: 1px solid #2ea0f0;
+}
+.a-table--body-vip .one--teeser--block:hover h4 {
+  color: #2ea0f0;
 }
 .a-table--body-vip .one-tc {
   width: 100% !important;
@@ -5725,6 +5773,11 @@ footer .foot-info .end-block .parus a:hover {
   background: #18db61;
   display: none;
 }
+@-moz-document url-prefix() {
+  .section--reg--form .section--reg--akkaunt .section--reg--akkaunt--one .phbg {
+    border: solid 9px #fff;
+  }
+}
 .section--reg--form .section--reg--akkaunt .section--reg--akkaunt--one .ak-title {
   text-align: center;
   position: relative;
@@ -6574,6 +6627,7 @@ h2 {
   height: 100%;
   top: 0px;
   left: 0px;
+  border: solid 9px #fff;
   background-position: CENTER CENTER !important;
   background-repeat: no-repeat !important;
   background-size: COVER !important;
@@ -6588,6 +6642,11 @@ h2 {
   opacity: 0.75;
   background: #18db61;
   display: none;
+}
+@-moz-document url-prefix() {
+  .section--reg--akkaunt .section--reg--akkaunt--one .phbg {
+    border: solid 9px #fff;
+  }
 }
 .section--reg--akkaunt .section--reg--akkaunt--one .ak-title {
   text-align: center;

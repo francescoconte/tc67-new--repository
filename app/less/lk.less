@@ -233,9 +233,13 @@ textarea {display: block; width: 100%; border: solid 1px #dddddd; padding: 20px;
 .section--reg--akkaunt {float: left; width: 100%; padding: 0 0px; margin: 70px 0; margin-left: -9px;
 .section--reg--akkaunt--one {float: left; display: inline-table; width: 50%; box-shadow: 0px 18px 27px 0px rgba(209, 209, 209, 0.004);
 border: solid 9px #fff; height: 300px; background: @coltxt; position: relative;
-.ph-image {position: absolute; display: block; width: 100%; height: 100%; top:0px; left:0px;
+.ph-image {position: absolute; display: block; width: 100%; height: 100%; top:0px; left:0px; border: solid 9px #fff;
 .bgCC; opacity: 0.55; }
 .phbg{position: absolute; width: 100%; height: 100%; top:0px; left:0px; opacity: 0.75; background: #18db61; display: none;}
+@-moz-document url-prefix()
+{
+.phbg{border: solid 9px #fff;}
+}
 .ak-title {text-align: center; .middle; font-size: 26px; font-family: @fontB; color: #fff;}
 .stickizz {position: absolute; display: block; top:27px; right: 27px; height: 25px; width: 60px;
 border-radius: 25px; background: #fff; border: solid 2px #fff; cursor: pointer;
